@@ -40,52 +40,109 @@ $$ LANGUAGE plpgsql;
 -- =====================================================
 -- EXÉCUTION : Créer les profils de test
 -- =====================================================
--- IMPORTANT : Créez d'abord ces users dans Authentication > Users :
---   - candidat@test.com / Test123456! (Auto Confirm)
---   - evaluateur@test.com / Test123456! (Auto Confirm)
---   - jury@test.com / Test123456! (Auto Confirm)
---   - admin@test.com / Test123456! (Auto Confirm)
+-- Ce script crée les profils UNIQUEMENT pour les users 
+-- qui existent déjà dans auth.users
 -- =====================================================
 
--- Candidat
-SELECT create_profile_from_email(
-  'candidat@test.com',
-  'candidat',
-  'Candidat Test',
-  '771234567'
-);
+-- D'abord, listons les users existants
+DO $$
+DECLARE
+  existing_users_count int;
+BEGIN
+  SELECT COUNT(*) INTO existing_users_count FROM auth.users;
+  RAISE NOTICE '📊 Nombre de users dans auth.users: %', existing_users_count;
+  
+  IF existing_users_count = 0 THEN
+    RAISE NOTICE '⚠️  AUCUN USER TROUVÉ !';
+    RAISE NOTICE '📋 Créez d''abord des users dans Authentication > Users';
+    RAISE NOTICE '   Puis réexécutez ce script.';
+  ELSE
+    RAISE NOTICE '✅ Users trouvés, création des profils...';
+  END IF;
+END $$;
 
--- Évaluateur
-SELECT create_profile_from_email(
-  'evaluateur@test.com',
-  'evaluateur',
-  'Évaluateur Test',
-  '779876543'
-);
+-- Créer les profils pour les users existants
+-- (ignore silencieusement si le user n'existe pas)
 
--- Jury
-SELECT create_profile_from_email(
-  'jury@test.com',
-  'jury',
-  'Jury Test',
-  '778888888'
-);
+-- Votre compte personnel (si créé)
+DO $$
+BEGIN
+  IF EXISTS (SELECT 1 FROM auth.users WHERE email = 'fayeouz84@gmail.com') THEN
+    PERFORM create_profile_from_email(
+      'fayeouz84@gmail.com',
+      'candidat',
+      'Ousseynou Faye',
+      '774006235'
+    );
+    RAISE NOTICE '✅ Profil créé pour fayeouz84@gmail.com';
+  ELSE
+    RAISE NOTICE '⏭️  User fayeouz84@gmail.com non trouvé, ignoré';
+  END IF;
+END $$;
 
--- Admin
-SELECT create_profile_from_email(
-  'admin@test.com',
-  'admin',
-  'Admin Test',
-  '779999999'
-);
+-- Candidat test (si créé)
+DO $$
+BEGIN
+  IF EXISTS (SELECT 1 FROM auth.users WHERE email = 'candidat@test.com') THEN
+    PERFORM create_profile_from_email(
+      'candidat@test.com',
+      'candidat',
+      'Candidat Test',
+      '771234567'
+    );
+    RAISE NOTICE '✅ Profil créé pour candidat@test.com';
+  ELSE
+    RAISE NOTICE '⏭️  User candidat@test.com non trouvé, ignoré';
+  END IF;
+END $$;
 
--- Votre compte personnel
-SELECT create_profile_from_email(
-  'fayeouz84@gmail.com',
-  'candidat',
-  'Ousseynou Faye',
-  '774006235'
-);
+-- Évaluateur test (si créé)
+DO $$
+BEGIN
+  IF EXISTS (SELECT 1 FROM auth.users WHERE email = 'evaluateur@test.com') THEN
+    PERFORM create_profile_from_email(
+      'evaluateur@test.com',
+      'evaluateur',
+      'Évaluateur Test',
+      '779876543'
+    );
+    RAISE NOTICE '✅ Profil créé pour evaluateur@test.com';
+  ELSE
+    RAISE NOTICE '⏭️  User evaluateur@test.com non trouvé, ignoré';
+  END IF;
+END $$;
+
+-- Jury test (si créé)
+DO $$
+BEGIN
+  IF EXISTS (SELECT 1 FROM auth.users WHERE email = 'jury@test.com') THEN
+    PERFORM create_profile_from_email(
+      'jury@test.com',
+      'jury',
+      'Jury Test',
+      '778888888'
+    );
+    RAISE NOTICE '✅ Profil créé pour jury@test.com';
+  ELSE
+    RAISE NOTICE '⏭️  User jury@test.com non trouvé, ignoré';
+  END IF;
+END $$;
+
+-- Admin test (si créé)
+DO $$
+BEGIN
+  IF EXISTS (SELECT 1 FROM auth.users WHERE email = 'admin@test.com') THEN
+    PERFORM create_profile_from_email(
+      'admin@test.com',
+      'admin',
+      'Admin Test',
+      '779999999'
+    );
+    RAISE NOTICE '✅ Profil créé pour admin@test.com';
+  ELSE
+    RAISE NOTICE '⏭️  User admin@test.com non trouvé, ignoré';
+  END IF;
+END $$;
 
 -- =====================================================
 -- VÉRIFICATION : Afficher tous les profils créés
