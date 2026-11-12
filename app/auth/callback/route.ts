@@ -29,7 +29,7 @@ export async function GET(request: Request) {
         .single();
 
       if (profile?.role === 'candidat') {
-        return NextResponse.redirect(new URL('/candidature', requestUrl.origin));
+        return NextResponse.redirect(new URL('/candidater', requestUrl.origin));
       } else if (profile?.role === 'evaluateur') {
         return NextResponse.redirect(new URL('/evaluateur', requestUrl.origin));
       } else if (profile?.role === 'jury') {

@@ -59,7 +59,7 @@ export async function middleware(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   // Routes publiques
-  const publicRoutes = ['/', '/login', '/signup', '/auth/callback'];
+  const publicRoutes = ['/', '/login', '/login-password', '/signup', '/auth/callback', '/test-supabase'];
   const isPublicRoute = publicRoutes.some((route) => request.nextUrl.pathname === route);
 
   // Rediriger vers login si non authentifié
@@ -68,7 +68,7 @@ export async function middleware(request: NextRequest) {
   }
 
   // Rediriger vers home si déjà authentifié et sur login/signup
-  if (user && (request.nextUrl.pathname === '/login' || request.nextUrl.pathname === '/signup')) {
+  if (user && (request.nextUrl.pathname === '/login' || request.nextUrl.pathname === '/login-password' || request.nextUrl.pathname === '/signup')) {
     // Récupérer le rôle pour redirection appropriée
     const { data: profile } = await supabase
       .from('profiles')
@@ -77,7 +77,7 @@ export async function middleware(request: NextRequest) {
       .single();
 
     if (profile?.role === 'candidat') {
-      return NextResponse.redirect(new URL('/candidature', request.url));
+      return NextResponse.redirect(new URL('/candidater', request.url));
     } else if (profile?.role === 'evaluateur') {
       return NextResponse.redirect(new URL('/evaluateur', request.url));
     } else if (profile?.role === 'jury') {
