@@ -16,10 +16,21 @@ export default function HomePage() {
             Commencer ma candidature
           </a>
           <a
-            href="/evaluateur"
+            href="/login"
             className="px-8 py-3 border-2 border-ocean text-ocean rounded-md hover:bg-ocean/5 transition-colors font-medium"
           >
+            Se connecter
+          </a>
+          <a
+            href="/evaluateur"
+            className="px-8 py-3 border-2 border-nuit/20 text-nuit/60 rounded-md hover:bg-nuit/5 transition-colors font-medium"
+          >
             Espace évaluateur
+          </a>
+        </div>
+        <div className="mt-8 text-sm text-nuit/60">
+          <a href="/signup" className="hover:text-ocean transition-colors">
+            Première visite ? Créer un compte →
           </a>
         </div>
       </div>
