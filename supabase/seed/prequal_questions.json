@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "position": 1,
+    "text": "Décrivez votre activité en 3 phrases : que faites-vous, pour qui, et quel problème résolvez-vous ?",
+    "help": "Soyez concret et simple. Exemple : Je vends des purificateurs d'eau à des familles de Dakar qui n'ont pas accès à l'eau potable. Je leur offre une solution abordable qui évite les maladies.",
+    "proof_hint": "Photo de votre produit/service, facture client, ou capture d'écran de vos réseaux sociaux"
+  },
+  {
+    "id": 2,
+    "position": 2,
+    "text": "Qui a ce problème aujourd'hui et comment le résout-il sans vous ?",
+    "help": "Décrivez votre client type et ce qu'il fait actuellement. Cela montre que vous comprenez votre marché.",
+    "proof_hint": null
+  },
+  {
+    "id": 3,
+    "position": 3,
+    "text": "À quel stade en êtes-vous ? (Idée / Prototype / Premières ventes / Activité établie)",
+    "help": "Soyez honnête sur où vous en êtes. Chaque étape a sa valeur.",
+    "proof_hint": null
+  },
+  {
+    "id": 4,
+    "position": 4,
+    "text": "Quelle preuve avez-vous que votre solution fonctionne ?",
+    "help": "Exemples : clients qui paient, commandes, contrats, témoignages, photos avant/après",
+    "proof_hint": "Factures, reçus, contrats, témoignages clients, photos"
+  },
+  {
+    "id": 5,
+    "position": 5,
+    "text": "Qu'avez-vous réalisé ces 90 derniers jours pour faire avancer votre activité ?",
+    "help": "Actions concrètes : nouveaux clients, amélioration produit, partenariat, etc.",
+    "proof_hint": "Tout document montrant cette activité"
+  },
+  {
+    "id": 6,
+    "position": 6,
+    "text": "Combien avez-vous gagné sur le dernier mois ou trimestre ? D'où vient ce chiffre ?",
+    "help": "Donnez un montant approximatif et la source (ventes, services, etc.). Si zéro, c'est OK, expliquez pourquoi.",
+    "proof_hint": "Carnet de ventes, relevé Wave/Orange Money, factures"
+  },
+  {
+    "id": 7,
+    "position": 7,
+    "text": "Combien dépensez-vous pour faire tourner votre activité ? Quelle est votre marge ?",
+    "help": "Charges principales : matières premières, transport, location, etc. Marge = ce qui vous reste.",
+    "proof_hint": null
+  },
+  {
+    "id": 8,
+    "position": 8,
+    "text": "Quelles ressources avez-vous mobilisées sans financement externe ?",
+    "help": "Exemples : équipement, local, réseau, compétences, temps, tontine, famille",
+    "proof_hint": null
+  },
+  {
+    "id": 9,
+    "position": 9,
+    "text": "Qui travaille avec vous et quel est le rôle de chacun ?",
+    "help": "Seul(e), en famille, avec des employés, des partenaires ? Qui fait quoi ?",
+    "proof_hint": null
+  },
+  {
+    "id": 10,
+    "position": 10,
+    "text": "Quel est le plus grand obstacle que vous rencontrez et comment l'avez-vous contourné ?",
+    "help": "Soyez précis sur le problème et ce que vous avez essayé pour le résoudre.",
+    "proof_hint": null
+  },
+  {
+    "id": 11,
+    "position": 11,
+    "text": "Où voulez-vous être dans 6 mois ? Donnez un objectif mesurable.",
+    "help": "Exemple : doubler mes ventes, ouvrir un second point de vente, recruter 2 personnes",
+    "proof_hint": null
+  },
+  {
+    "id": 12,
+    "position": 12,
+    "text": "Quel type d'accompagnement vous serait le plus utile maintenant ?",
+    "help": "Formation, mentorat, financement, mise en réseau, gestion, marketing... ?",
+    "proof_hint": null
+  },
+  {
+    "id": 13,
+    "position": 13,
+    "text": "Avez-vous des documents que vous pouvez partager ? (facultatif)",
+    "help": "Tout document qui appuie votre dossier : photos, factures, carnets, contrats, etc.",
+    "proof_hint": "Photos de votre activité, documents comptables, contrats"
+  }
+]

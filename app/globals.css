@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Couleurs principales */
+    --baobab: #0e6b4f;
+    --nuit: #14212b;
+    --brume: #f5f7f6;
+    --ocean: #1d5c8a;
+    --soleil: #e8a317;
+    --alerte: #b3261e;
+
+    /* Bandes de scoring */
+    --band-eleve: #0e6b4f;
+    --band-interessant: #1d5c8a;
+    --band-consolider: #b7791f;
+    --band-insuffisant: #5b6b78;
+
+    /* Typographie */
+    --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+    --font-body: 'Figtree', system-ui, sans-serif;
+    
+    /* Échelle typographique */
+    --step-0: 1rem;
+    --step-1: 1.25rem;
+    --step-2: 1.563rem;
+    --step-3: 1.953rem;
+    --step-4: 2.441rem;
+    
+    /* Rayons */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    
+    /* Utilitaires */
+    --measure: 66ch;
+    --focus: 3px solid var(--ocean);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --brume: #0f171d;
+      --nuit: #e8eef1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--brume);
+    color: var(--nuit);
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .focus-visible {
+    outline: var(--focus);
+    outline-offset: 2px;
+  }
+}

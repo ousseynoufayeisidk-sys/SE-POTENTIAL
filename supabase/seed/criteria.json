@@ -1,0 +1,116 @@
+[
+  {
+    "code": "B_VISION",
+    "dimension": "PEOPLE",
+    "label": "Vision stratégique et ambition",
+    "weight": 5
+  },
+  {
+    "code": "B_PROACT",
+    "dimension": "PEOPLE",
+    "label": "Esprit entrepreneurial et proactivité",
+    "weight": 5
+  },
+  {
+    "code": "B_RESIL",
+    "dimension": "PEOPLE",
+    "label": "Résilience et intelligence émotionnelle",
+    "weight": 6
+  },
+  {
+    "code": "B_LEAD",
+    "dimension": "PEOPLE",
+    "label": "Leadership et intelligence relationnelle",
+    "weight": 5
+  },
+  {
+    "code": "B_AGILE",
+    "dimension": "PEOPLE",
+    "label": "Agilité et capacité d'adaptation",
+    "weight": 5
+  },
+  {
+    "code": "B_DISC",
+    "dimension": "PEOPLE",
+    "label": "Discipline et culture de la performance",
+    "weight": 5
+  },
+  {
+    "code": "B_CLIENT",
+    "dimension": "PEOPLE",
+    "label": "Orientation client et capacité commerciale",
+    "weight": 5
+  },
+  {
+    "code": "B_ETHIC",
+    "dimension": "PEOPLE",
+    "label": "Éthique, responsabilité et vision durable",
+    "weight": 4
+  },
+  {
+    "code": "E_PLAN",
+    "dimension": "EXECUTION",
+    "label": "Planification et priorisation",
+    "weight": 7
+  },
+  {
+    "code": "E_DECIDE",
+    "dimension": "EXECUTION",
+    "label": "Décision et arbitrage",
+    "weight": 6
+  },
+  {
+    "code": "E_RESS",
+    "dimension": "EXECUTION",
+    "label": "Gestion des ressources / trésorerie",
+    "weight": 6
+  },
+  {
+    "code": "E_REGUL",
+    "dimension": "EXECUTION",
+    "label": "Régularité des résultats et engagements",
+    "weight": 6
+  },
+  {
+    "code": "P_PROBLEME",
+    "dimension": "BUSINESS",
+    "label": "Problème client et besoin vérifié",
+    "weight": 7
+  },
+  {
+    "code": "P_VALID",
+    "dimension": "BUSINESS",
+    "label": "Validation marché / preuves de demande",
+    "weight": 6
+  },
+  {
+    "code": "P_MODELE",
+    "dimension": "BUSINESS",
+    "label": "Modèle économique et viabilité",
+    "weight": 6
+  },
+  {
+    "code": "P_DIFF",
+    "dimension": "BUSINESS",
+    "label": "Différenciation et potentiel de croissance",
+    "weight": 6
+  },
+  {
+    "code": "I_CONF",
+    "dimension": "IMPACT",
+    "label": "Éthique, conformité et transparence",
+    "weight": 4
+  },
+  {
+    "code": "I_IMPACT",
+    "dimension": "IMPACT",
+    "label": "Impact social / environnemental pertinent",
+    "weight": 3
+  },
+  {
+    "code": "I_PEREN",
+    "dimension": "IMPACT",
+    "label": "Pérennité et parties prenantes",
+    "weight": 3
+  }
+]
