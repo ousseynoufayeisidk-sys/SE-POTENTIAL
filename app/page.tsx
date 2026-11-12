@@ -16,7 +16,7 @@ export default function HomePage() {
             Commencer ma candidature
           </a>
           <a
-            href="/login"
+            href="/login-password"
             className="px-8 py-3 border-2 border-ocean text-ocean rounded-md hover:bg-ocean/5 transition-colors font-medium"
           >
             Se connecter
@@ -28,10 +28,17 @@ export default function HomePage() {
             Espace évaluateur
           </a>
         </div>
-        <div className="mt-8 text-sm text-nuit/60">
-          <a href="/signup" className="hover:text-ocean transition-colors">
-            Première visite ? Créer un compte →
-          </a>
+        <div className="mt-8 text-sm text-nuit/60 space-y-2">
+          <div>
+            <a href="/signup" className="hover:text-ocean transition-colors">
+              Première visite ? Créer un compte →
+            </a>
+          </div>
+          <div>
+            <a href="/login" className="hover:text-baobab transition-colors">
+              Magic Link (lien par email)
+            </a>
+          </div>
         </div>
       </div>
     </div>
